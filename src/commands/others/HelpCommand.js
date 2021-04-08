@@ -15,6 +15,7 @@ module.exports = class HelpCommand extends BaseCommand {
             .addField('Social command', '!k social (or !k soc)')
             .addField('Packs command', '!k pack')
             .addField('Avatar commands', '!k avatar or !k avatar {user} (or !k ava or !k ava {user})')
+            .addField('Get a roast', '!k roast')
             .setFooter(client.user.tag, client.user.displayAvatarURL());
 
         const infoEmbed = new Discord.MessageEmbed()

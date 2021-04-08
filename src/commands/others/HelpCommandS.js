@@ -8,14 +8,15 @@ module.exports = class HelpCommand extends BaseCommand {
 
     async run(client, message, args) {
         const sectionEmbed = new Discord.MessageEmbed()
-            .setColor('#3068F6')
-            .setTitle('Bot Help')
-            .setDescription('Use !k as the prefix.')
-            .addField('Help commands', '!k help (or !k h)')
-            .addField('Social command', '!k social (or !k soc)')
-            .addField('Packs command', '!k pack')
-            .addField('Avatar commands', '!k avatar or !k avatar {user} (or !k ava or !k ava {user})')
-            .setFooter(client.user.tag, client.user.displayAvatarURL());
+        .setColor('#3068F6')
+        .setTitle('Bot Help')
+        .setDescription('Use !k as the prefix.')
+        .addField('Help commands', '!k help (or !k h)')
+        .addField('Social command', '!k social (or !k soc)')
+        .addField('Packs command', '!k pack')
+        .addField('Avatar commands', '!k avatar or !k avatar {user} (or !k ava or !k ava {user})')
+        .addField('Get a roast', '!k roast')
+        .setFooter(client.user.tag, client.user.displayAvatarURL());
 
         const infoEmbed = new Discord.MessageEmbed()
             .setTitle('Information Commands.')
