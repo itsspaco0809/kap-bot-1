@@ -7,35 +7,18 @@ module.exports = class SocialCommand extends BaseCommand {
   }
 
   async run(client, message, args) {
-    const behanceEmbed = new Discord.MessageEmbed()
-      .setTitle('ranz Behance Portfolio')
-      .setURL('https://www.behance.net/itssranz')
+    const socialEmbed = new Discord.MessageEmbed()
+      .setColor('#3068F6')
+      .addField('━━━━━━━━━━', '**ranz Behance Portfolio**')
       .setThumbnail('https://mir-s3-cdn-cf.behance.net/user/276/d0e795387515995.5fec334c27e96.png')
-      .setColor('#3068F6')
-      .addField('Check out ranz\'s Portfolio.', 'NEW - Social Media Headers - X era')
+      .addField('_NEW - Social Media Headers - X era_', '[click me](https://www.behance.net/itssranz)')
+      .addField('━━━━━━━━━━', '**ranz Instagram**')
+      .addField('_Check out ranz\'s Instagram._', '[click me](https://www.instagram.com/ranz.png/)')
+      .addField('━━━━━━━━━━', '**ranz Twitter**')
+      .addField('_Check out ranz\'s Twitter._', '[click me](https://twitter.com/Itsscopa)')
       .setTimestamp()
-      .setFooter("ranz", )
+      .setFooter("ranz",)
 
-    const instagramEmbed = new Discord.MessageEmbed()
-      .setTitle('ranz Instagram')
-      .setURL('https://www.instagram.com/ranz.png/')
-      .setThumbnail('https://mir-s3-cdn-cf.behance.net/user/276/d0e795387515995.5fec334c27e96.png')
-      .setColor('#3068F6')
-      .addField('Check out ranz\'s Instagram.', 'Keep updating!')
-      .setTimestamp()
-      .setFooter("ranz", )
-
-      const twitterEmbed = new Discord.MessageEmbed()
-      .setTitle('ranz Twitter')
-      .setURL('https://twitter.com/Itsscopa')
-      .setThumbnail('https://cdn.discordapp.com/attachments/413028585633349633/829397485487128647/image0.jpg')
-      .setColor('#3068F6')
-      .addField('Check out ranz\'s Twitter.', 'Keep updating!')
-      .setTimestamp()
-      .setFooter("ranz", )
-
-   await  message.channel.send(behanceEmbed).catch(err => console.log(err));
-   await  message.channel.send(instagramEmbed).catch(err => console.log(err));
-   await  message.channel.send(twitterEmbed).catch(err => console.log(err));
+    await message.channel.send(socialEmbed).catch(err => console.log(err));
   }
 }

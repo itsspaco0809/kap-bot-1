@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 
 module.exports = class AvatarCommand extends BaseCommand {
     constructor() {
-        super('ava', 'others', []);
+        super('avt', 'others', []);
     }
 
     async run(client, message, args) {

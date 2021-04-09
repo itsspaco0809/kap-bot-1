@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 
 module.exports = class PackCommand extends BaseCommand {
     constructor() {
-        super('pack', 'materials', []);
+        super('pack2', 'materials', []);
     }
 
     async run(client, message, args) {
